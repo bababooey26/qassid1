@@ -173,11 +173,24 @@ document.addEventListener('DOMContentLoaded', () => {
         const autoPlayDelay = 3000; 
 
 
+
+        const isMobile = () => window.innerWidth <= 809;
+
+
+        let maxScrollableColumnsBeforeLoop = 16; 
+
+        if (isMobile()) {
+
+            maxScrollableColumnsBeforeLoop = 20; 
+        }
+
         const COLUMNS_TO_REMAIN_BEFORE_LOOP = 4;
-        const loopThreshold = 16 - COLUMNS_TO_REMAIN_BEFORE_LOOP; 
 
-
+        const loopThreshold = maxScrollableColumnsBeforeLoop - COLUMNS_TO_REMAIN_BEFORE_LOOP; 
+        
         const visibleDots = 12; 
+
+        
 
         const dots = [];
         
@@ -205,9 +218,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
         const moveToStep = (stepIndex) => {
-            if (stepIndex < 0 || stepIndex >= totalSteps) return;
-            
 
+            if (stepIndex < 0 || stepIndex > loopThreshold) return; 
+            
+            
             const clientLogoBox = document.querySelector('.client-logo-box');
             if (!clientLogoBox) return; 
 
@@ -224,8 +238,9 @@ document.addEventListener('DOMContentLoaded', () => {
             currentStep = stepIndex;
 
 
+            const dotIndex = stepIndex % visibleDots;
             dots.forEach((dot, index) => {
-                dot.classList.toggle('active', index === currentStep);
+                dot.classList.toggle('active', index === dotIndex);
             });
         };
         
