@@ -349,7 +349,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(counterSection);
     }
   
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbw4hDMOgq7c5MqihUN6fTen-uGHE0Dsvuv-xWcY9Cs44EpQ80QS3LIV7oKvKLFz07imQw/exec"; 
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxJuE6Cy9KVLb9phWE6HU86eMrgrWVk7l3PV_bVKiKFyk3cTQNEOt_mLOkSeQkOOzE4og/exec"; 
 
 const contactForm = document.querySelector('.contact-form'); 
 
