@@ -1260,11 +1260,11 @@ font-size: 24px;
 .footer-map iframe {
     filter: none;
     opacity: 1;
-    /* --- التعديل هنا لضمان أن الخريطة لا تسبب إزاحة أفقية --- */
+    
     width: 100% !important; 
     max-width: 100% !important; 
     height: 100% !important; 
-    /* ------------------------------------------------ */
+    
 }
 .footer-bottom-content-wrapper {
     display: flex;
@@ -1364,9 +1364,9 @@ font-size: 24px;
         text-align: right; 
     }
     .contact-info-text h2 { 
-        font-size: 40px; /* تم التعديل */
+        font-size: 40px; 
         justify-content: flex-end; 
-        line-height: 1.2; /* تم التعديل */
+        line-height: 1.2; 
     }
 
 
@@ -1389,8 +1389,8 @@ font-size: 24px;
         text-align: right; 
     }
     .contact-info-text p.contact-pre-title { 
-        font-size: 16px !important; /* تم التعديل */
-        margin-bottom: 25px; /* تم التعديل */
+        font-size: 16px !important; 
+        margin-bottom: 25px; 
     }
     .contact-form-wrapper {
         justify-content: center; 
@@ -1419,8 +1419,8 @@ font-size: 24px;
     }
     .footer-grid { grid-template-columns: 1fr; gap: 50px; } 
     .footer-map { max-width: 100%; 
-        height: 200px; /* تم التعديل */
-        margin-top: 20px; /* تم التعديل */
+        height: 200px; 
+        margin-top: 20px; 
     }
     .footer-logo-column { grid-column: span 1; }
     .footer-column a { font-size: 20px; }
@@ -1719,12 +1719,12 @@ font-size: 24px;
     
     
     .contact-info-text h2 { 
-        font-size: 28px; /* تم التعديل */
+        font-size: 28px; 
         justify-content: flex-end; 
         flex-direction: row; 
         flex-wrap: wrap; 
-        gap: 0 8px; /* تم التعديل */
-        line-height: 1.2; /* تم التعديل */
+        gap: 0 8px; 
+        line-height: 1.2; 
     }
 
     
@@ -1735,12 +1735,12 @@ font-size: 24px;
         
     }
 .contact-info-text h2 { 
-        font-size: 28px; /* تم التعديل */
+        font-size: 28px; 
         justify-content: flex-end; 
         flex-direction: row; 
         flex-wrap: wrap; 
-        gap: 0 8px; /* تم التعديل */
-        line-height: 1.2; /* تم التعديل */
+        gap: 0 8px; 
+        line-height: 1.2; 
     }
     .contact-info-text h2 .nob-word-split {
         display: inline-block; 
@@ -2261,7 +2261,6 @@ font-size: 24px;
 
 
 
-
 .client-logo-box:hover {
     background-color: #fdfdfd;
 }
@@ -2316,7 +2315,14 @@ font-size: 24px;
     display: inline !important;       
   }
 }
-
+.clients-carousel-headera p {
+    font-family: var(--font-arabic-text);
+    font-size: 15px;
+    color: var(--color-black);
+    opacity:0.8 ;
+    max-width: 400px;
+    line-height: 1.6;
+}
 
 
 .contact-info-text h2 {
@@ -2811,7 +2817,7 @@ font-size: 24px;
   flex-wrap: nowrap;         
   width: 100%;
   transition: transform 0.5s ease-in-out;
-  transition: transform 0.7s cubic-bezier(.16,1,.3,1); /* هذا يجعل الانتقال سلساً وليس "قفزة" */
+  transition: transform 0.7s cubic-bezier(.16,1,.3,1); 
   direction: ltr;
   box-sizing: border-box;
 }
@@ -2837,17 +2843,17 @@ font-size: 24px;
 .clients-grid {
     display: grid;
 
-    /* ✨ أهم سطرين */
-    grid-auto-flow: column;           /* عبّي عموديًا: من أعلى لأسفل ثم العمود التالي */
-    grid-template-rows: repeat(3, auto); /* 3 صفوف = كل عمود فيه 3 عناصر */
+    
+    grid-auto-flow: column;           
+    grid-template-rows: repeat(3, auto); 
 
-    /* أعمدة إضافية تُنشأ تلقائيًا بنفس العرض */
+    
     grid-auto-columns: 1fr;
 
-    gap: 5.5px;               /* عدّل المسافة حسب الذوق */
+    gap: 5.5px;               
     padding: 0 16px;
     background-color: transparent;
-    justify-items: center;  /* توسيط العناصر داخل الخلايا */
+    justify-items: center;  
 }
 
 
@@ -3026,56 +3032,56 @@ font-size: 24px;
 
 
 
-/* في ملف style.css (استعلام الشاشات الصغيرة) */
+
 @media (max-width: 809px) {
 
-    /* ✨ لكي تظهر 3 صفوف و 2 عمود في Viewport الجوال */
+    
     .clients-grid {
-        /* 3 صفوف (للشبكة 2x3) */
+        
         grid-template-rows: repeat(3, auto) !important; 
  
-        /* الآن، هذا الجزء يجب أن يسمح بـ 24 عمودًا أصليًا + 24 مكررًا = 48 عمودًا ليتمكن الكاروسيل من التمرير اللانهائي */
+        
         grid-template-columns: repeat(48, minmax(100px, 1fr)) !important; 
         
-        /* هذا يضمن أن الانتقال الأفقي يعمل */
+        
         grid-auto-flow: column !important; 
         width: fit-content !important; 
-        padding: 0 8px; /* تقليل المسافة الجانبية */
+        padding: 0 8px; 
         gap: 10px !important;
     }
 
-    /* هذا مهم لضبط حجم الصندوق ليلائم الشبكة الجديدة */
+    
     .client-logo-box {
-        width: 150px !important; /* أو أي عرض ثابت مناسب لعمودين */
+        width: 150px !important; 
         height: 120px !important; 
     }
     
-    /* عرض الغلاف في الجوال يجب أن يكون 100% ليظهر 2 عمود فقط */
+    
     .carousel-wrapper {
         width: 100%;
         overflow: hidden;
     }
     
-    /* تأكد من أن الشريحة تظل كبيرة بما يكفي لتحمل كل الأعمدة الـ 48 */
+    
     .carousel-slide.full-width-slide {
         width: max-content !important;
         min-width: max-content !important;
         flex: 0 0 auto !important;
     }
 }
-/* إصلاح مشكلة الخريطة في الفوتر (سبب الإزاحة الأفقية) */
+
 .footer-map iframe {
-    width: 100% !important; /* لضمان أن الخريطة لا تتجاوز عرض العنصر الحاوي */
+    width: 100% !important; 
     max-width: 100% !important; 
     height: 100% !important; 
 }
 
-/* في وضع الجوال: لضمان أن الحاوية تتكيف بشكل كامل */
+
 @media (max-width: 809px) {
     .footer-map {
         width: 100%;
         max-width: 100%;
-        height: 200px; /* لتقليل ارتفاع الخريطة في الجوال */
+        height: 200px; 
         margin-top: 20px;
     }
 }
