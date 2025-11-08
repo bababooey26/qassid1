@@ -197,7 +197,7 @@ body.scrolled-down .main-header {
     color: var(--color-black);
     position: relative;
     padding-bottom: 5px; 
-    white-space: nowrap; 
+    white-space: normal;
     margin-left: auto; 
 }
 .contact-us-link::after {
@@ -274,34 +274,29 @@ body.scrolled-down .main-header {
     top: 0;
     left: 0;
     width: 100%;
-    
-    
-    height: 84vh; 
-    
-    
+
+    height: 100dvh; 
+height: 84vh;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
     background-color: rgba(245, 245, 245, 0.95); 
-    
-    
+
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    
+
     z-index: 999;
-    padding: 100px 36px 40px;
+    padding: 100px 36px 10px;
     flex-direction: column;
     justify-content: space-between;
     overflow-y: auto;
     color: #134B70;
-    
-    
+
     opacity: 0;
     transform: translateY(-100%); 
     transition: opacity 0.4s ease, transform 0.4s cubic-bezier(0.25, 1, 0.5, 1); 
-    
+
     text-align: center;
-    
-    
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
 }
 .mobile-menu nav a {
     font-family: var(--font-arabic-title); 
@@ -1553,29 +1548,7 @@ font-size: 24px;
 
 
 
-.mobile-menu-close {
-    position: absolute;
-    top: 25px; 
-    right: 30px; 
-    background: none;
-    border: none;
-    width: 25px;
-    height: 25px;
-    padding: 0;
-    cursor: pointer;
-    z-index: 1002;
-    opacity: 0.8;
-}
-.mobile-menu-close span {
-    display: block;
-    width: 25px;
-    height: 2px;
-    background-color: #134B70;
-    position: absolute;
-    top: 11px;
-    left: 0;
-    transition: background-color 0.3s ease;
-}
+
 .mobile-menu-close:hover span {
     background-color: #508C9B;
 }
@@ -1637,6 +1610,9 @@ font-size: 24px;
 }
 
 
+#mobile-menu-close {
+  display: none !important;
+}
 
 
 
@@ -1753,11 +1729,6 @@ font-size: 24px;
 
 
 
-
-/* ==========================================================================
-    الخطوة 2: استبدل الكود بالكامل في ملف style.css
-==========================================================================
-*/
 
 
 .services-section {
@@ -2174,7 +2145,7 @@ font-size: 24px;
     gap: 40px; 
     margin-bottom: 40px;
     flex-wrap: wrap; 
-    white-space: nowrap; 
+ flex-wrap: wrap; 
 }
 
 
@@ -2214,14 +2185,13 @@ font-size: 24px;
 
 
 .clients-carousel-headera {
+  
     justify-content: flex-start; 
     align-items: center;
     gap: 10px; 
     margin-bottom: 40px;
     flex-wrap: wrap; 
-    white-space: nowrap; 
 }
-
 
 
 .clients-carousel-headera h2 {
@@ -2249,8 +2219,9 @@ font-size: 24px;
     font-size: 28px;
     color: var(--color-black);
     opacity:0.8 ;
-    max-width: 400px;
+    max-width: 1190px !important;
     line-height: 1.6;
+    
 }
 
 
@@ -2342,7 +2313,7 @@ font-size: 24px;
 @media (max-width: 768px) {
   .contact-info-text h2 {
     display: inline-block;      
-    white-space: nowrap;        
+    white-space: normal;     
     direction: rtl !important;             
     text-align: right;
   }
@@ -2356,7 +2327,7 @@ font-size: 24px;
 
 @media (max-width: 768px) {
   .contact-info-text h2 {
-    white-space: nowrap;
+    white-space: normal;
     overflow-x: auto;  
     -webkit-overflow-scrolling: touch; 
   }
@@ -2754,9 +2725,10 @@ font-size: 24px;
     -webkit-mask-image: linear-gradient(to top left, black 50%, transparent 100%);
 }
 
-
 .hero-content h1 {
-    white-space: nowrap; 
+
+    white-space: normal; 
+    
     max-width: none; 
 }
 
@@ -2782,9 +2754,9 @@ font-size: 24px;
 
     
     .hero-content h1 {
-        font-size: 15px; 
+        font-size: 19px; 
         max-width: none;
-        white-space: nowrap;
+        white-space: normal;
     }
 }
 
@@ -3085,3 +3057,5 @@ font-size: 24px;
         margin-top: 20px;
     }
 }
+
+
